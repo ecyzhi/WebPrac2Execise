@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebPrac2Execise.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+        .sitecontainer {
+            border: solid 1px;
+        }
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div style="text-align: center;" class="sitecontainer">
+                <h1>Student Portal Page</h1>
+            </div>
+            <div class="sitecontainer">
+
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                </asp:SiteMapPath>
+
+            </div>
+            <div style="height:550px;float: left;width: 200px;" class="sitecontainer">
+
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                </asp:TreeView>
+
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+            </div>
+            <div style="height:550px;margin-left:200px;" class="sitecontainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
